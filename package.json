@@ -1,36 +1,25 @@
 {
-  "name": "text-to-svg",
-  "version": "3.1.5",
+  "name": "string-to-svg",
+  "version": "4.0.0",
   "description": "Convert text to SVG path without native dependence.",
-  "main": "index.js",
-  "files": [
-    ".gitignore",
-    "CHANGELOG.md",
-    "README.md",
-    "package.json",
-    "node_modules",
-    "gulpfile.js",
-    "index.js",
-    "build",
-    "src",
-    "test",
-    "fonts",
-    "bin"
-  ],
-  "bin": {
-    "text-to-svg": "bin/text-to-svg"
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "gulp test",
-    "test:html": "gulp test:html",
-    "clean": "gulp clean",
-    "lint": "gulp lint",
-    "build": "gulp build",
-    "prepack": "npm run build"
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shrhdk/text-to-svg"
+    "url": "https://github.com/sasnovacat08/string-to-svg"
   },
   "keywords": [
     "fonts",
@@ -41,33 +30,29 @@
     "vector"
   ],
   "author": "Hideki Shiro",
+  "contributors": [
+    {
+      "name": "Ruben Barros",
+      "email": "ruben.barr08@gmail.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shrhdk/text-to-svg/issues"
+    "url": "https://github.com/sasnovacat08/string-to-svg/issues"
   },
-  "homepage": "https://github.com/shrhdk/text-to-svg",
+  "homepage": "https://github.com/sasnovacat08/string-to-svg",
   "dependencies": {
-    "commander": "^2.11.0",
     "opentype.js": "1.3.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/register": "^7.0.0",
-    "browserify": "^16.2.3",
-    "del": "^3.0.0",
-    "eslint-plugin-arrow-function": "^2.0.0",
-    "eslint-plugin-classes": "^0.1.1",
-    "eslint-plugin-template-string": "^1.0.0",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-eslint": "^5.0.0",
-    "gulp-mocha": "^6.0.0",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
+    "@types/opentype.js": "^1.3.4",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.2"
   }
 }

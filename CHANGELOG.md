@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.0.0
+
+ - Rewrite in Typescript by @sasnovacat08
+
 ## 3.1.5
 
  - Fix deployment script.
