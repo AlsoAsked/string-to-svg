@@ -1,7 +1,4 @@
-import { loadSync } from 'opentype.js'
 import { Font } from 'opentype.js'
-
-export { Font }
 
 export type Anchor =
   | 'left'
@@ -95,7 +92,7 @@ export function getWidth(text: string, options: STSOptionsWithFont) {
   return width
 }
 
-export function parseAnchorOption(anchor: Anchor) {
+function parseAnchorOption(anchor: Anchor) {
   let horizontalMatch = anchor.match(/left|center|right/gi) || []
   let horizontal = horizontalMatch.length === 0 ? 'left' : horizontalMatch[0]
 
@@ -160,22 +157,4 @@ export function getMetrics(text: string, options: STSOptionsWithFont) {
     ascender,
     descender,
   }
-}
-
-export function loadFont(fontPath: string) {
-  return loadSync(fontPath)
-}
-
-export function getSVG(text: string, options: STSOptions) {
-  if (!options.font) {
-    options.font = loadFont('./fonts/ipag.ttf')
-  }
-  const metrics = getMetrics(text, options as STSOptionsWithFont)
-  let svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${metrics.width}" height="${metrics.height}">`
-  if (options.beforePath) svg += options.beforePath
-  svg += getPath(text, options as STSOptionsWithFont)
-  if (options.afterPath) svg += options.afterPath
-  svg += '</svg>'
-
-  return svg
 }

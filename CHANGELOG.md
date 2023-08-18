@@ -1,6 +1,12 @@
 # CHANGELOG
 
+## 4.0.1
+
+ - Fix loadFont function.
+
 ## 4.0.0
+
+**This version doesn't work. So do not use this version.**
 
  - Rewrite in Typescript by @sasnovacat08
 
