@@ -49,18 +49,18 @@
   },
   "homepage": "https://github.com/sasnovacat08/string-to-svg",
   "dependencies": {
-    "opentype.js": "1.3.4"
+    "@alsoasked/opentype.js": "^1.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20.5.1",
-    "@types/opentype.js": "^1.3.4",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
-    "eslint": "^8.47.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.2",
-    "tsup": "^7.2.0",
-    "typescript": "^5.1.6",
-    "vitest": "^0.34.2"
+    "@types/node": "^20.11.19",
+    "@types/opentype.js": "^1.3.8",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.56.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.3.1"
   }
 }

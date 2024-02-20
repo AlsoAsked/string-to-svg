@@ -1,5 +1,5 @@
 import { join } from 'path'
-import { loadSync, Font } from 'opentype.js'
+import { loadSync, Font } from '@alsoasked/opentype.js'
 import { Anchor, STSOptions, STSOptionsWithFont, getD, getHeight, getMetrics, getPath, getWidth } from './index'
 
 export { Anchor, STSOptions, STSOptionsWithFont, getD, getHeight, getMetrics, getPath, getWidth }

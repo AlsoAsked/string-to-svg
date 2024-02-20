@@ -1,4 +1,4 @@
-import { Font, parse } from 'opentype.js'
+import { Font, parse } from '@alsoasked/opentype.js'
 import { Anchor, STSOptionsWithFont, getD, getHeight, getMetrics, getPath, getWidth } from './index'
 
 export { Anchor, STSOptionsWithFont, getD, getHeight, getMetrics, getPath, getWidth }

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { STSOptionsWithFont, getMetrics } from '../src'
-import { loadSync } from 'opentype.js'
+import { loadSync } from '@alsoasked/opentype.js'
 
 const font = loadSync('./fonts/ipag.ttf')
 

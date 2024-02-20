@@ -1,4 +1,4 @@
-import { Font } from 'opentype.js'
+import { Font } from '@alsoasked/opentype.js'
 
 export type Anchor =
   | 'left'
