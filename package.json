@@ -1,5 +1,5 @@
 {
-  "name": "string-to-svg",
+  "name": "@alsoasked/string-to-svg",
   "version": "4.0.1",
   "description": "Convert text to SVG path without native dependence.",
   "type": "module",
